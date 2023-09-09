@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaptCulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="interactive.js" defer></script>
+</head>
+<body>
+            
+
+    <div class="calculator-grid">
+            <div class="img-fluid">
+                <img src="cap logo.png" alt="capculator_logo" width="290" height="120">
+            </div>
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+            
+        </div>
+        <button data-all-clear onclick="audio_clear.play()" class="span-two">CLR</button>
+        <button data-delete onclick="audio_del.play()">DEL</button>
+        <button data-operation onclick="audio_operation.play()">÷</button>
+        <button data-number onclick="audio_any.play()">1</button>
+        <button data-number onclick="audio_any.play()">2</button>
+        <button data-number onclick="audio_any.play()">3</button>
+        <button data-operation onclick="audio_operation.play()">*</button>
+        <button data-number onclick="audio_any.play()">4</button>
+        <button data-number onclick="audio_any.play()">5</button>
+        <button data-number onclick="audio_any.play()">6</button>
+        <button data-operation onclick="audio_operation.play()">+</button>
+        <button data-number onclick="audio_any.play()">7</button>
+        <button data-number onclick="audio_any.play()">8</button>
+        <button data-number onclick="audio_any.play()">9</button>
+        <button data-operation onclick="audio_operation.play()">-</button>
+        <button data-number onclick="audio_any.play()">.</button>
+        <button data-number onclick="audio_any.play()">0</button>
+        <button data-equals onclick="audio_equal.play()" class="span-two">=</button>
+    </div>
+        <!--BUTTON SOUNDS-->
+        <script>  
+            const audio_any = new Audio();
+            audio_any.src = "./any_number.mp3";
+
+            const audio_del = new Audio();
+            audio_del.src = "./delete_sound.mp3";
+
+            const audio_clear = new Audio();
+            audio_clear.src = "./clear_sound.mp3";
+
+            const audio_equal = new Audio();
+            audio_equal.src = "./button_equal.mp3";
+
+            const audio_operation = new Audio();
+            audio_operation.src = "./button_operation.mp3";
+        </script> 
+</body> 
+</html>
